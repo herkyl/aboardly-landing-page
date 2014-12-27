@@ -1,0 +1,89 @@
+@import "style/buttons.scss";
+@import "style/variables";
+
+body {
+  font-family: "proxima-nova", HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  background: #f4f4f7;
+  color: #444;
+  margin: 0;
+}
+
+h1 {
+  font-size: 46px;
+  line-height: 50px;
+  color: #f7f7f7;
+  font-weight: 300;
+  padding: 20px 0;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #D6DEE3;
+  vertical-align: baseline;
+}
+
+h3 {
+  font-weight: 300;
+  margin: 0;
+}
+
+.header {
+  color: white;
+}
+
+.header__main {
+  background: $color-background;
+  padding: 3em 1em;
+}
+
+.header__signup {
+  background: lighten($color-background, 10%);
+  padding: 3em 1em;
+}
+
+.header__signup__email {
+  height: 50px;
+  border-radius: 2px;
+  border: none;
+  padding: 0 15px;
+  margin-right: 10px;
+  font-size: 1.05em;
+}
+
+.flasher {
+  margin: 2em 0;
+  font-size: 26px;
+  height: 40px;
+  .flasher__item {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    opacity: 0;
+    &.show {
+      animation: flyIn 4s;
+    }
+  }
+}
+
+@keyframes flyIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
