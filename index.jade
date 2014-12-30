@@ -6,12 +6,58 @@
     form
       input.header__signup__email(type="email" placeholder="Your e-mail")
       input.header__signup__button.button(type="submit" value="Let me know when Aboardly launches")
+    
+h2 This is how Aboardly helps    
         
 .flasher
-  .flasher__item When user <strong>hasn't signed in</strong> in <strong>14 days</strong> send email <strong>Why did you leave?</strong>
-  .flasher__item When user <strong>signed up</strong> send email <strong> Welcome!</strong>
-  .flasher__item When user <strong>left items to shopping cart</strong> in <strong>12 hours</strong> send email <strong> Coupon code!</strong>
-  .flasher__item When user <strong>hasn't tried feature</strong> in <strong>3 days</strong> send email <strong> Need help?</strong>
+  .flasher__item
+    
+    .flasher__item__content
+      |When user
+      select.var
+        option signed in
+        option signed up
+      select.var
+        option never
+        option 1 time
+        option 2 times
+        option 3 times
+      |in
+      select.var
+        option 1 hour
+        option 12 hours
+        option 2 days
+        option 14 days
+        option 30 days
+      |send email 
+      select.var
+        option Why did you leave?
+        option Need help?
+        option Coupon code!
+        option Welcome!
+      
+    
+    .h3 Offboarding
+    .flasher__item__content
+      |When user 
+      span.var hasn't signed in
+      | in 
+      span.var 14 days
+      |  send email 
+      span.var Why did you leave?
+  .flasher__item
+    .h3 Onboarding 
+    .flasher__item__content
+      |When user 
+      span.var signed up
+      |  send email 
+      span.var Welcome!
+  .flasher__item
+    .h3 Retention
+    .flasher__item__content When user <span class="var">left items to shopping cart</span> in <strong>12 hours</strong> send email <strong> Coupon code!</strong>
+  .flasher__item
+    .h3 Retention
+    .flasher__item__content When user <span class="var">hasn't tried feature</span> in <strong>3 days</strong> send email <strong> Need help?</strong>
 
 .howto
   .howto__item.howto__item--api

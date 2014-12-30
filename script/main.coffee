@@ -1,4 +1,5 @@
 window.onload = ->
+  return
   index = 0
   item = null
   items = document.querySelectorAll '.flasher__item'
