@@ -1,5 +1,7 @@
-@import "style/buttons.scss";
+@import "style/buttons";
 @import "style/variables";
+@import "bower_components/gallery-css/dist/gallery.css";
+@import "style/gallery";
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 body {
@@ -7,6 +9,8 @@ body {
   margin: 0;
   font-weight: 400;
   line-height: 1.667;
+  background: #f4f4f7;
+  font-size: 18px;
 }
 body, select {
   font-family: "Open Sans",Tahoma,Verdana,Segoe,sans-serif;
@@ -14,8 +18,7 @@ body, select {
 }
 
 h1 {
-  font-size: 46px;
-  line-height: 50px;
+  font-size: 66px;
   font-weight: 300;
   padding: 20px 0;
 }
@@ -36,12 +39,15 @@ h3 {
 
 .header {
   color: white;
-  color: #f7f7f7;
 }
 
 .header__main {
   background: $color-background;
   padding: 3em 1em;
+  text-shadow: rgba(0, 0, 0, 0.2) 0px 3px 0px;
+  h2 {
+    opacity: 0.8;
+  }
 }
 
 .header__signup {
@@ -59,21 +65,21 @@ h3 {
 }
 
 .flasher {
-  margin: 2em 0;
   font-size: 20px;
   font-weight: bold;
-  background: #f4f4f7;
-  margin: 0 3em;
+  background: white;
   border-radius: 5px;
+  box-shadow: 0px 2px 0px 0px darken(white, 25%);
+  padding: 5px 10px;
   .var {
+    background: #f4f4f7;
     -webkit-appearance: none;
     border: none;
-    box-shadow: 0px 2px 0px 0px darken(white, 25%);
-    background: white;
+    box-shadow: 0px 2px 0px 0px darken(#f4f4f7, 25%);
     border-radius: 3px;
     font-size: 20px;
     margin: 0 5px;
-    padding: 0 10px;
+    padding: 2px 10px;
     cursor: pointer;
     font-weight: normal;
     &:focus {
@@ -82,47 +88,18 @@ h3 {
   }
 }
 .flasher__row {
-  padding: 12px 0;
+  padding: 14px 0;
   position: relative;
-  &:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 11px;
-    // background: white;
-    color: white;
-    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
-    border-bottom-right-radius: 5px;
-    padding: 0px 5px;
-  }
 }
 .flasher__row__condition {
   border-bottom: 1px dotted rgba(0, 0, 0, 0.25);
-  &:before {
-    content: 'Condition';
-  }
 }
 .flasher__row__action {
-  &:before {
-    content: 'Action';
-  }
 }
 
-@keyframes flyIn {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  10% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  90% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(100%);
-    opacity: 0;
+
+@media (max-width: 850px) {
+  h1 {
+    font-size: 46px;
   }
 }

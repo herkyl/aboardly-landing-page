@@ -1,14 +1,14 @@
 @import "variables";
 
 .button {
-  background: $color-action;
+  background: $color-background;
   color: white;
-  border-radius: 2px;
-  box-shadow: 0px 2px 0px 0px darken($color-action, 25%);
+  border-radius: 4px;
+  box-shadow: 0px 2px 0px 0px darken($color-background, 25%);
   text-shadow: 0 2px 0 rgba(0,0,0,0.33);
   border-width: 0;
   font-size: 1.05em;
-  padding: 0 15px;
+  padding: 0 25px;
   height: 50px;
   cursor: pointer;
   white-space: normal;

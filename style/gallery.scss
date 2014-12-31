@@ -1,0 +1,40 @@
+.gallery .control-button {
+  color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.gallery .control-button:hover,
+.gallery.items-1 .control-button:nth-child(1),
+.gallery.items-2 .control-button:nth-child(2),
+.gallery.items-3 .control-button:nth-child(3) {
+  color: rgba(0, 0, 0, 0.8) !important;
+}
+
+
+
+/*
+Theme controls how everything looks in Gallery CSS.
+*/
+.gallery {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-bottom: 75px;
+}
+.gallery .item {
+  margin: 0;
+}
+.gallery .controls {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-family: sans-serif;
+}
+.gallery .control-button {
+  display: inline-block;
+  margin: 0 .02em;
+  font-size: 3em;
+  text-align: center;
+  text-decoration: none;
+  transition: color .1s;
+}
