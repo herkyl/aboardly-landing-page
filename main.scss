@@ -4,7 +4,6 @@
 
 body {
   text-align: center;
-  background: #f4f4f7;
   margin: 0;
   font-weight: 400;
   line-height: 1.667;
@@ -61,35 +60,51 @@ h3 {
 
 .flasher {
   margin: 2em 0;
-  font-size: 26px;
-  /*height: 40px;
-  .flasher__item {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    opacity: 0;
-    &.show {
-      animation: flyIn 4s;
-    }
-  }*/
-  .flasher__item__title {
-    text-transform: uppercase;
-    font-size: 14px;
-    margin-bottom: 10px;
-    color: $color-action;
-    font-weight: bold;
-  }
+  font-size: 20px;
+  font-weight: bold;
+  background: #f4f4f7;
+  margin: 0 3em;
+  border-radius: 5px;
   .var {
-    font-weight: bold;
     -webkit-appearance: none;
     border: none;
-    border-bottom: 1px dotted #7b8386;
+    box-shadow: 0px 2px 0px 0px darken(white, 25%);
     background: white;
     border-radius: 3px;
-    font-size: 26px;
+    font-size: 20px;
     margin: 0 5px;
     padding: 0 10px;
+    cursor: pointer;
+    font-weight: normal;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.flasher__row {
+  padding: 12px 0;
+  position: relative;
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 11px;
+    // background: white;
+    color: white;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+    border-bottom-right-radius: 5px;
+    padding: 0px 5px;
+  }
+}
+.flasher__row__condition {
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.25);
+  &:before {
+    content: 'Condition';
+  }
+}
+.flasher__row__action {
+  &:before {
+    content: 'Action';
   }
 }
 

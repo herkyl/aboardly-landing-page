@@ -10,55 +10,36 @@
 h2 This is how Aboardly helps    
         
 .flasher
-  .flasher__item
+  .flasher__row.flasher__row__condition
+    |When user
+    select.var
+      option signed in
+      option signed up
+      option used feature
+    select.var
+      option exactly
+      option more than
+      option less than
+    select.var
+      option 0 times
+      option 1 time
+      option 2 times
+      option 3 times
+    |in
+    select.var
+      option forever
+      option 1 hour
+      option 24 hours
+      option 30 days
+  .flasher__row.flasher__row__action
+    |then send email 
+    select.var
+      option Why did you leave?
+      option Need help?
+      option Coupon code!
+      option Welcome!
+    |.
     
-    .flasher__item__content
-      |When user
-      select.var
-        option signed in
-        option signed up
-      select.var
-        option never
-        option 1 time
-        option 2 times
-        option 3 times
-      |in
-      select.var
-        option 1 hour
-        option 12 hours
-        option 2 days
-        option 14 days
-        option 30 days
-      |send email 
-      select.var
-        option Why did you leave?
-        option Need help?
-        option Coupon code!
-        option Welcome!
-      
-    
-    .h3 Offboarding
-    .flasher__item__content
-      |When user 
-      span.var hasn't signed in
-      | in 
-      span.var 14 days
-      |  send email 
-      span.var Why did you leave?
-  .flasher__item
-    .h3 Onboarding 
-    .flasher__item__content
-      |When user 
-      span.var signed up
-      |  send email 
-      span.var Welcome!
-  .flasher__item
-    .h3 Retention
-    .flasher__item__content When user <span class="var">left items to shopping cart</span> in <strong>12 hours</strong> send email <strong> Coupon code!</strong>
-  .flasher__item
-    .h3 Retention
-    .flasher__item__content When user <span class="var">hasn't tried feature</span> in <strong>3 days</strong> send email <strong> Need help?</strong>
-
 .howto
   .howto__item.howto__item--api
     .howto__item__title Send events using our API
