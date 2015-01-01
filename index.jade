@@ -2,20 +2,31 @@
   .header__main
     h1 Onboarding made simple
     h2 Send your users emails based on their interactions with your business
-  .header__signup
-    form
-      input.header__signup__email(type="email" placeholder="Your e-mail")
-      input.header__signup__button.button(type="submit" value="Let me know when Aboardly launches")  
+  include ./signup.jade
 
-.gallery.items-3
-  
-  #item-1.control-operator
-  #item-2.control-operator
-  #item-3.control-operator
-  
-  figure.item
-    h2 Customer onboarding
-    .flasher
+.steps
+
+  h2 Register customers and send events using our API
+  .steps__step
+    pre.popout
+      code
+        |{
+        |   'email': 'john@google.com',
+        |   'first_name': 'John',
+        |   'last_name': 'Smith'
+        |}
+
+  h2 Design and personilze email templates
+  .steps__step(style="overflow:hidden;")
+    .steps__step__item Trololololo
+    pre.popout.steps__step__item
+      code
+        |Hey {{first_name}}!
+        |Welcome to Product. If you have any questions..
+
+  h2 Emails get sent based on the rules you specify
+  .steps__step
+    .flasher.popout
       .flasher__row.flasher__row__condition
         |When user
         select.var
@@ -23,20 +34,16 @@
           option signed up
           option used feature
         select.var
-          option exactly
-          option more than
-          option less than
-        select.var
           option 0 times
           option 1 time
           option 2 times
           option 3 times
         |in
         select.var
+          option 30 days
           option forever
           option 1 hour
           option 24 hours
-          option 30 days
       .flasher__row.flasher__row__action
         |then send email 
         select.var
@@ -44,83 +51,6 @@
           option Need help?
           option Coupon code!
           option Welcome!
-        |.
-    
-  figure.item
-    h2 Customer retention
-    .flasher
-      .flasher__row.flasher__row__condition
-        |When user
-        select.var
-          option signed in
-          option signed up
-          option used feature
-        select.var
-          option exactly
-          option more than
-          option less than
-        select.var
-          option 0 times
-          option 1 time
-          option 2 times
-          option 3 times
-        |in
-        select.var
-          option forever
-          option 1 hour
-          option 24 hours
-          option 30 days
-      .flasher__row.flasher__row__action
-        |then send email 
-        select.var
-          option Why did you leave?
-          option Need help?
-          option Coupon code!
-          option Welcome!
-        |.
+          |.
 
-  figure.item
-    h2 Customer offborading
-    .flasher
-      .flasher__row.flasher__row__condition
-        |When user
-        select.var
-          option signed in
-          option signed up
-          option used feature
-        select.var
-          option exactly
-          option more than
-          option less than
-        select.var
-          option 0 times
-          option 1 time
-          option 2 times
-          option 3 times
-        |in
-        select.var
-          option forever
-          option 1 hour
-          option 24 hours
-          option 30 days
-      .flasher__row.flasher__row__action
-        |then send email 
-        select.var
-          option Why did you leave?
-          option Need help?
-          option Coupon code!
-          option Welcome!
-        |.
-
-  .controls
-    a.control-button(href="#item-1")•
-    a.control-button(href="#item-2")•
-    a.control-button(href="#item-3")•
-
-
-.howto
-  .howto__item.howto__item--api
-    .howto__item__title Send events using our API
-    .howto__item__content 
-  .howto__item.howto__item--recipes
-    .howto__item__title Add recipes using the website
+include ./signup.jade
