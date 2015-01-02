@@ -1,30 +1,20 @@
 .header
   .header__main
-    h1 Onboarding made simple
-    h2 Send your users emails based on their interactions with your business
+    h1 Email automation made simple
+    h2 Send emails to your customers triggered by their interations (or lack there of) with your business
   include ./signup.jade
 
 .steps
 
-  h2 Register customers and send events using our API
-  .steps__step
-    pre.popout
-      code
-        |{
-        |   'email': 'john@google.com',
-        |   'first_name': 'John',
-        |   'last_name': 'Smith'
-        |}
-
-  h2 Design and personilze email templates
-  .steps__step(style="overflow:hidden;")
-    .steps__step__item Trololololo
-    pre.popout.steps__step__item
-      code
-        |Hey {{first_name}}!
-        |Welcome to Product. If you have any questions..
-
   h2 Emails get sent based on the rules you specify
+  .steps__step__text
+    | Aboardly lets you specify different recipes such as:
+    br
+    b Welcome to our product!
+    br
+    b Why did you stop using our great product?
+    br
+    b You left our awesome stuff at the shopping cart, here's a discount code!
   .steps__step
     .flasher.popout
       .flasher__row.flasher__row__condition
@@ -45,12 +35,37 @@
           option 1 hour
           option 24 hours
       .flasher__row.flasher__row__action
-        |then send email 
+        |then send email
         select.var
           option Why did you leave?
           option Need help?
           option Coupon code!
           option Welcome!
           |.
+
+  h2 Design and personalize email templates
+  .steps__step(style="overflow:hidden;")
+    .steps__step__text Customize emails using our powerful yet simple template language.
+    .flasher.popout(style="text-align:left;")
+      |Hey
+      .var first_name
+      |!
+      br
+      |Welcome to Product.
+      br
+      |If you have any questions..
+
+
+  h2 Register customers and send events using our API
+  .steps__step
+    .steps__step__text Use our super simple API to intagrate your business with Aboardly.
+      | Do everything else from our website without any specific knowledge of technology.
+    pre.popout
+      code
+        |{
+        |   'email': 'john@google.com',
+        |   'first_name': 'John',
+        |   'last_name': 'Smith'
+        |}
 
 include ./signup.jade
