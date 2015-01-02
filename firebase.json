@@ -1,9 +1,0 @@
-{
-  "firebase": "aboardly-landing",
-  "public": "www",
-  "ignore": [
-    "firebase.json",
-    "**/.*",
-    "**/node_modules/**"
-  ]
-}
