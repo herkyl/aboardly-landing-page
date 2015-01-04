@@ -41,6 +41,8 @@ pre {
 }
 
 input {
+  margin-top: 5px;
+  margin-bottom: 5px;
   -webkit-appearance: none;
   &:focus {
     outline: none;
@@ -80,11 +82,9 @@ input {
   border-radius: 2px;
   border: none;
   padding: 0 15px;
-  margin-right: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
   font-size: 1.05em;
-  display: inline-block;
-}
-.clear {
   display: inline-block;
 }
 .popout {
