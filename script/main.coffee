@@ -1,12 +1,20 @@
-window.onload = ->
-  return
-  index = 0
-  item = null
-  items = document.querySelectorAll '.flasher__item'
-  nextItem = ->
-    item?.classList.remove 'show'
-    item = items[index++ % items.length]
-    item.classList.add 'show'
+getEmail = ->
+  fields = document.querySelectorAll '.header__signup__email'
+  fields[0].value
 
-  setInterval nextItem, 4000
-  nextItem()
+resetEmail = ->
+  fields = document.querySelectorAll '.header__signup__email'
+  fields[0].value = ''
+
+onSubmit = ->
+  firebase = new Firebase 'https://aboardly-landing.firebaseio.com/emails'
+  firebase.push(email: getEmail(), submitDone)
+  resetEmail()
+  false
+
+submitDone = (error) ->
+  if error
+    alert "Unable to sign up. #{error}"
+    console.error error
+  else
+    alert 'Thanks for signing up!'
